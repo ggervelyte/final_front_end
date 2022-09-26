@@ -1,38 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #EECDA3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #EECDA3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .App {
-  text-align: center;
+    width: 1200px;
+    /* border: 1px solid black; */
+    margin: 100px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reg-form-panel,
+.reg-form-panel-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reg-form-panel label,
+.reg-form-panel-2 label {
+    margin: 10px;
+    font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.reg-form-panel input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #EF629F;
 }
 
-.App-link {
-  color: #61dafb;
+.reg-form-panel button,
+.reg-form-panel-2 button,
+.filt-btn button {
+    padding: 15px;
+    background: #FF869E;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filt-btn button {
+    margin-bottom: 25px;
+}
+
+.reg-form-panel button:hover,
+.reg-form-panel-2 button:hover,
+.filt-btn button:hover,
+.profile-page button:hover,
+.filter-gender-btns button:hover {
+    background: #EF629F;
+}
+
+.reg-form-panel-2 input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #EF629F;
+}
+
+.reg-form-panel-2 label {
+    margin: 5px;
+}
+
+.reg {
+    width: 50%;
+    padding: 15px;
+    background: #FFE6E6;
+    box-shadow: 12px 11px 15px #D2001A;
+    margin: auto;
+}
+
+.text {
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.text h4 {
+    margin-top: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+}
+
+.check input {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.check span {
+    padding-left: 15px;
+    letter-spacing: 2px;
+}
+
+.error {
+    text-align: center;
+    margin-top: 15px;
+    color: #D2001A;
+    font-weight: bold;
+}
+
+.link {
+    letter-spacing: 2px;
+    color: #5800FF;
+}
+
+.link:hover {
+    color: #0096FF;
+}
+
+.profile-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-page button {
+    margin-top: 25px;
+    padding: 15px;
+    width: 250px;
+    background: #FFC4E1;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-add-img {
+    margin-top: 15px;
+}
+
+.profile-add-img input {
+    padding: 15px;
+    background: #F3C5C5;
+}
+
+.profile-page-text {
+    margin-bottom: 10px;
+}
+
+.swipe {
+    width: 50%;
+    height: 500px;
+    margin: auto;
+}
+
+.swipers-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.filter-page {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFE6E6;
+}
+
+.filter-page span {
+    margin: 10px;
+}
+
+.filter-pg-text {
+    margin: 25px;
+}
+
+.filter-gender-btns {
+    display: flex;
+    gap: 25px;
+}
+
+.filter-gender-btns button {
+    background: #F3C5C5;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-gender-btns button {
+    padding: 15px;
+    width: 212px;
+}
+
+.filter-select-city {
+    margin-top: 55px;
+    padding: 15px;
+    width: 450px;
+    background: #F3C5C5;
+    border: none;
+    font-size: 14px;
+}
+
+.slidecontainer {
+    margin-top: 25px;
+    width: 54%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #F3C5C5;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #EF629F;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #EF629F;
+    cursor: pointer;
+}
+
+.year-range {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swipe-page-text {
+    margin-top: 5px;
+}
+
+.swipe-btns {
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+}
+
+.swipe-btns button {
+    width: 150px;
+}
+
+.history-pg {
+    width: 100%;
+}
+
+.history-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes-link {
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.history-swiper {
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+}
+
+.history-img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 599px) {
+    .App {
+        margin: 25px 0;
+        width: 100%;
+    } 
+
+    .reg {
+        width: 90%;
+    }
+
+    .swipe {
+        width: 80%;
+    }
+
+    .profile-add-img input {
+        padding: 10px;
+    }
+
+    .profile-page button {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .filter-page {
+        justify-content: center;
+        width: 80%;
+       
+    }
+
+    .filter-select-city {
+        width: 340px;
+    }
+   .filter-gender-btns {
+    gap: 15px;
+   }
+
+   .filter-gender-btns button {
+    width: 164px;
+   }
+
+   .slidecontainer {
+    margin-top: 10px;
+    width: 80%;
+   }
+
+   .swipe-btns {
+    margin-top: 30px;
+   }
+
+   .history-top {
+   margin-left: 25px;
+    width: 90%;
+   }
+
+   .wrapper {
+    justify-content: center;
+   }
+
+   .reg-form-panel-2 input {
+    margin-bottom: 10px;
+   }
+}
+
+@media screen and (min-width: 600px) {
+    .App {
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .reg {
+        width: 90%;
+        }
+
+    .swipe {
+        width: 80%;
+    }
+
+        .filter-page {
+            justify-content: center;
+            width: 80%;
+    
+        }
+    
+        .filter-select-city {
+            width: 440px;
+        }
+    
+        .filter-gender-btns {
+            gap: 15px;
+        }
+    
+        .filter-gender-btns button {
+        width: 210px;
+        }
+
+        .slidecontainer {
+            margin-top: 10px;
+            width: 80%;
+        }
+}
+
+@media screen and (min-width: 960px) {
+    .App {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .reg {
+        width: 50%;
+    }
+
+    .reg-form-panel-2 input {
+        margin-bottom: 25px;
+    }
+
+     .filter-page {
+        justify-content: center;
+        width: 70%;
+        
+    } 
+
+    .filter-gender-btns button {
+        padding: 15px;
+         width: 212px;
+    }
+    
+    .filter-select-city {
+        margin-top: 55px;
+        padding: 15px;
+        width: 450px;
+    }
+    .slidecontainer {
+        margin-top: 25px;
+        width: 54%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+   .App {
+        width: 1200px;
+        margin: 100px auto;
+   } 
+
+   .reg {
+    width: 50%;
+   }
+
+   .swipe {
+       width: 50%;
+   }
+
+   .profile-add-img input {
+    padding: 15px;
+    }
+
+    .filter-page {
+        width: 70%;
+    }
+    .filter-gender-btns {
+        display: flex;
+        gap: 25px;
+    }
+
 }
